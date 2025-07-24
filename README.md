@@ -23,5 +23,5 @@ Choose 'other' for 'Software Requested' and type 'Python' in the box that appear
 
 ( you can perform the python install without I.T, but you should let them know )
 
-<a href="[https://example.com](https://github.com/matt-work-conway/Public-Directory-Mapper/archive/refs/heads/main.zip)" target="_blank">Link Text</a>
+<a href="https://github.com/matt-work-conway/Public-Directory-Mapper/archive/refs/heads/main.zip" target="_blank">Link Text</a>
 
