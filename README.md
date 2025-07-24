@@ -8,9 +8,11 @@ A public repository for the directory mapper.
 
 1. Download and install python: https://www.python.org/downloads/
    
-   i. **Make sure to check the 'install path variables' box after opening the installer**
+   i. **Make sure to check the 'Add python.exe to PATH' box after opening the installer**
    
-   ii. You do not need to be admin to intsall ( don't click that option )
+   ii. You do not need to be admin to intsall ( but you should send I.T. a courtesy ticket )
+
+   iii. Close the installer when it is complete
 
 3. <a href="https://github.com/matt-work-conway/Public-Directory-Mapper/archive/refs/heads/main.zip" target="_blank">Download</a> this GitHub repository and unzip / save where you desire
 4. Open 'directory_mapper.py' and wait for the first time installs
