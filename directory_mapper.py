@@ -4,8 +4,8 @@
 # Imports
 import os
 try:
-    import numpy as np
     module_name = 'numpy'
+    import numpy as np
 except ImportError:
     print (f"Trying to Install required module: {module_name}\n")
     os.system(f'python -m pip install {module_name}')
