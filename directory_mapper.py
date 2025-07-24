@@ -1,21 +1,21 @@
-#DIRECTORY_MAP.py
+# DIRECTORY_MAP.py
 
 
-#Imports
+# Imports
 import os
 try:
     import numpy as np
     module_name = 'numpy'
 except ImportError:
-    print (f"Trying to Install required module: numpy\n")
-    os.system(f'python -m pip install numpy')
+    print (f"Trying to Install required module: {module_name}\n")
+    os.system(f'python -m pip install {module_name}')
     # -- above lines try to install requests module if not present
     # -- if all went well, import required module again ( for global access)
 import numpy as np
 
 try:
-    import pandas as pd
     module_name = 'pandas'
+    import pandas as pd
 except ImportError:
     print (f"Trying to Install required module: {module_name}\n")
     os.system(f'python -m pip install {module_name}')
@@ -24,8 +24,8 @@ except ImportError:
 import pandas as pd
 
 try:
-    from datetime import date
     module_name = 'datetime'
+    from datetime import date
 except ImportError:
     print (f"Trying to Install required module: {module_name}\n")
     os.system(f'python -m pip install {module_name}')
@@ -34,8 +34,8 @@ except ImportError:
 from datetime import date
 
 try:
-    import openpyxl
     module_name = 'openpyxl'
+    import openpyxl
 except ImportError:
     print (f"Trying to Install required module: {module_name}\n")
     os.system(f'python -m pip install {module_name}')
@@ -43,6 +43,7 @@ except ImportError:
     # -- if all went well, import required module again ( for global access)
 import openpyxl
 
+'''
 try:
     import re
     module_name = 're'
@@ -52,6 +53,7 @@ except ImportError:
     # -- above lines try to install requests module if not present
     # -- if all went well, import required module again ( for global access)
 import re
+'''
 
 # Create main_path so files can be referenced from relative path within package folder
 main_path = os.path.dirname(__file__)
