@@ -12,7 +12,7 @@ A public repository for the directory mapper.
    
    ii. You do not need to be admin to intsall ( don't click that option )
 
-3. Download this GitHub repository and unzip / save where you desire
+3. [Download](https://github.com/matt-work-conway/Public-Directory-Mapper/archive/refs/heads/main.zip) this GitHub repository and unzip / save where you desire
 4. Open 'directory_mapper.py' and wait for the first time installs
 5. Paste a file path into the terminal window and hit enter. ( it may take some time for large directories )
 
@@ -22,3 +22,6 @@ https://servicedesk.bench.com/catalog_items/1685231-software-request/service_req
 Choose 'other' for 'Software Requested' and type 'Python' in the box that appears.
 
 ( you can perform the python install without I.T, but you should let them know )
+
+<a href="[https://example.com](https://github.com/matt-work-conway/Public-Directory-Mapper/archive/refs/heads/main.zip)" target="_blank">Link Text</a>
+
