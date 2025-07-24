@@ -58,20 +58,6 @@ import re
 # Create main_path so files can be referenced from relative path within package folder
 main_path = os.path.dirname(__file__)
 
-# Takes user input from terminal
-directory_input = input("Paste a filepath:")
-
-today = date.today()
-
-full_date = today.strftime("%y-%m-%d") # dd/mm/YY
-print('File Date: ' + full_date)
-
-directory_level = 0
-
-treeFrame = pd.DataFrame({'Tree':[],'LINK':[]})
-treeLevel = 0
-
-
 def generate_directory_tree(path, indent=''):
     """Generates a directory tree diagram."""
     global treeLevel
@@ -93,24 +79,37 @@ def generate_directory_tree(path, indent=''):
 
             treeFrame.loc[treeLevel, 'Tree'] = indent + '|__' + entry.name + ' FOLDER ACCESS DENIED FOR USER GENERATING TREE'
             print(indent + '|__' + entry.name + ' FOLDER ACCESS DENIED FOR USER GENERATING TREE')
-
-
-if __name__ == "__main__":
-    generate_directory_tree(directory_input)
-
-
-
-print(treeFrame)
-
-directory_input = directory_input.replace('\\', '_')
-directory_input = directory_input.replace(':', '')
-print(directory_input)
-
-file_name = full_date + ' (' + directory_input + ')' + '.xlsx'
-maps_path = os.path.join(main_path, 'Directory Maps\\')
-
-file_path = os.path.join(maps_path, file_name)
-
-treeFrame.to_excel(file_path)
-
-print('\n\nMap saved to: ' + file_path)
+# Loop that runs so window can be used multiple times
+while True:
+    # Takes user input from terminal
+    directory_input = input('\n\nPaste a filepath:')
+    # Current date of map
+    today = date.today()
+    # Parsed current date
+    full_date = today.strftime("%y-%m-%d") # dd/mm/YY
+    # Print current date
+    print('File Date: ' + full_date)
+    
+    directory_level = 0
+    
+    treeFrame = pd.DataFrame({'Tree':[],'LINK':[]})
+    
+    treeLevel = 0
+    
+    if __name__ == "__main__":
+        generate_directory_tree(directory_input)
+    
+    print(treeFrame)
+    directory_input = directory_input.replace('\\', '_')
+    directory_input = directory_input.replace(':', '')
+    print(directory_input)
+    
+    file_name = full_date + ' (' + directory_input + ')' + '.xlsx'
+    maps_path = os.path.join(main_path, 'Directory Maps\\')
+    
+    file_path = os.path.join(maps_path, file_name)
+    
+    treeFrame.to_excel(file_path)
+    
+    print('\n\nMap saved to: ' + file_path)
+    
