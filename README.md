@@ -24,3 +24,10 @@ https://servicedesk.bench.com/catalog_items/1685231-software-request/service_req
 Choose 'other' for 'Software Requested' and type 'Python' in the box that appears.
 
 ( you can perform the python install without I.T, but you should let them know )
+
+
+FUTURE IMPROVEMENTS:
+1. Checkpoint system for saving excel doc during huge file maps
+2. Pause and continue / save option (option stop)
+3. Fill protection for excel file size, make a second one with auto-name and folder
+4. TBD
