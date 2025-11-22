@@ -3,58 +3,61 @@
 
 # Imports
 import os
-try:
-    module_name = 'numpy'
+setup_input = input('\n\nRun first time setup? (y)\(n)\n')
+
+if 'y' in setup_input or 'Y' in setup_input or '1' in setup_input:
+    try:
+        module_name = 'numpy'
+        import numpy as np
+    except ImportError:
+        print (f"Trying to Install required module: {module_name}\n")
+        os.system(f'python -m pip install {module_name}')
+        # -- above lines try to install requests module if not present
+        # -- if all went well, import required module again ( for global access)
     import numpy as np
-except ImportError:
-    print (f"Trying to Install required module: {module_name}\n")
-    os.system(f'python -m pip install {module_name}')
-    # -- above lines try to install requests module if not present
-    # -- if all went well, import required module again ( for global access)
-import numpy as np
-
-try:
-    module_name = 'pandas'
+    
+    try:
+        module_name = 'pandas'
+        import pandas as pd
+    except ImportError:
+        print (f"Trying to Install required module: {module_name}\n")
+        os.system(f'python -m pip install {module_name}')
+        # -- above lines try to install requests module if not present
+        # -- if all went well, import required module again ( for global access)
     import pandas as pd
-except ImportError:
-    print (f"Trying to Install required module: {module_name}\n")
-    os.system(f'python -m pip install {module_name}')
-    # -- above lines try to install requests module if not present
-    # -- if all went well, import required module again ( for global access)
-import pandas as pd
-
-try:
-    module_name = 'datetime'
+    
+    try:
+        module_name = 'datetime'
+        from datetime import date
+    except ImportError:
+        print (f"Trying to Install required module: {module_name}\n")
+        os.system(f'python -m pip install {module_name}')
+        # -- above lines try to install requests module if not present
+        # -- if all went well, import required module again ( for global access) 
     from datetime import date
-except ImportError:
-    print (f"Trying to Install required module: {module_name}\n")
-    os.system(f'python -m pip install {module_name}')
-    # -- above lines try to install requests module if not present
-    # -- if all went well, import required module again ( for global access) 
-from datetime import date
-
-try:
-    module_name = 'openpyxl'
+    
+    try:
+        module_name = 'openpyxl'
+        import openpyxl
+    except ImportError:
+        print (f"Trying to Install required module: {module_name}\n")
+        os.system(f'python -m pip install {module_name}')
+        # -- above lines try to install requests module if not present
+        # -- if all went well, import required module again ( for global access)
     import openpyxl
-except ImportError:
-    print (f"Trying to Install required module: {module_name}\n")
-    os.system(f'python -m pip install {module_name}')
-    # -- above lines try to install requests module if not present
-    # -- if all went well, import required module again ( for global access)
-import openpyxl
-
-'''
-try:
+    
+    '''
+    try:
+        import re
+        module_name = 're'
+    except ImportError:
+        print (f"Trying to Install required module: {module_name}\n")
+        os.system(f'python -m pip install {module_name}')
+        # -- above lines try to install requests module if not present
+        # -- if all went well, import required module again ( for global access)
     import re
-    module_name = 're'
-except ImportError:
-    print (f"Trying to Install required module: {module_name}\n")
-    os.system(f'python -m pip install {module_name}')
-    # -- above lines try to install requests module if not present
-    # -- if all went well, import required module again ( for global access)
-import re
-'''
-
+    '''
+else:
 # Create main_path so files can be referenced from relative path within package folder
 main_path = os.path.dirname(__file__)
 
@@ -113,3 +116,4 @@ while True:
     
     print('\n\nMap saved to: ' + file_path)
     
+
