@@ -58,6 +58,10 @@ if 'y' in setup_input or 'Y' in setup_input or '1' in setup_input:
     import re
     '''
 else:
+    import numpy as np
+    import pandas as pd
+    from datetime import date
+    import openpyxl
     print('\n')
 # Create main_path so files can be referenced from relative path within package folder
 main_path = os.path.dirname(__file__)
@@ -117,5 +121,6 @@ while True:
     
     print('\n\nMap saved to: ' + file_path)
     
+
 
 
